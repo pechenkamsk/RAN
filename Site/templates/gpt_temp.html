@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Python Code Execution</title>
+</head>
+<body>
+    <h1>Flask Python Code Execution</h1>
+    <form action="/run_code" method="post">
+        <div>
+            <label for="sector">Выберите отрасль:</label>
+            <input type="number" name="sector">
+        </div>
+        <div>
+            <label for="import_change">Поднимаем/опускаем импорт из России в %:</label>
+            <input type="number" name="import_change">
+        </div>
+        <div>
+            <label for="country">Выберите страну:</label>
+            <input type="number" name="country">
+        </div>
+        <div>
+            <label for="year">Выберите год:</label>
+            <input type="number" name="year">
+        </div>
+        <div>
+            <label for="scenario">Выберите сценарий:</label>
+            <input type="number" name="scenario">
+        </div>
+        <button type="submit">Выполнить код</button>
+    </form>
+    {% if  plot_url1 %}
+        <img src="{{ plot_url1 }}" alt="Plot1">
+        <img src="{{ plot_url2 }}" alt="Plot2">
+        <img src="{{ plot_url3 }}" alt="Plot3">
+        <img src="{{ plot_url4 }}" alt="Plot4">
+        <img src="{{ plot_url5 }}" alt="Plot5">
+    {% endif %}
+</body>
+</html>
